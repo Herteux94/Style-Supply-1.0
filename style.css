@@ -385,6 +385,8 @@ body {
     background-color: black;
     color: RGB(112, 156, 162);
     display: grid;
+    align-items: center;
+
 }
 
 
@@ -491,9 +493,8 @@ body {
 
 .form-control {
     width: 25vw !important;
+
 }
-
-
 
 
 .row {
@@ -509,8 +510,8 @@ body {
 
 .contactFormContainerBackground {
     background-image: url('./img/post.jpg');
-    background-position: cover;
-    height: 80vh;
+    background-size: cover;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -523,12 +524,14 @@ body {
     margin: 80px 200px;
     border-radius: 20px;
     background-color: RGBA(0, 0, 0, 0.5);
-    ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .contactForm {
-    margin: 120px;
+    margin: 80px;
     display: flex !important;
     box-shadow: 0 3px 10px black;
     align-items: center !important;
@@ -536,7 +539,8 @@ body {
     width: 100%;
     background-color: RGBA(112, 156, 162, 0.2);
     color: white;
-
+    width: 80%;
+    padding-bottom: 80px;
 }
 
 
@@ -594,12 +598,112 @@ body {
 }
 
 
+#exampleFormControlTextarea1 {
+    overflow-y: scroll;
+    height: 100px;
+    resize: none;
+}
+
+
+.contactForm {
+    text-align: center;
+}
+
+
+
+
+
+.row {
+    width: 50%;
+}
+
+
+
 @media (max-width: 1200px) {
+
     .naviContainer a {
         font-size: 12px;
     }
 
     .socialMediaNavi {
         height: 16px
+    }
+
+
+    .customContent {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .customContent2 div,
+    h2 {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    .customContainer {
+        justify-content: center;
+    }
+
+    .styleShirtIcon {
+        flex: 1;
+    }
+
+    .buttonCustomShop {
+        width: 80%;
+        height: 20%;
+        border-radius: 80px;
+    }
+
+    .buttonCustomContact {
+        width: 80%;
+        height: 20%;
+        border-radius: 80px;
+    }
+
+    .styleShirtIcon {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    #media1000LinkSports {
+        display: none;
+    }
+}
+
+
+@media (max-width: 845px) {
+
+    #media1000LinkTeam {
+        display: none;
+    }
+}
+
+
+@media (max-width: 845px) {
+
+    .links {
+        padding: 16px
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .links {
+        padding: 8px;
+    }
+
+    .socialMediaNaviContainer {
+        display: flex;
+    }
+
+    .bodyChild {
+        background-position: right;
     }
 }
