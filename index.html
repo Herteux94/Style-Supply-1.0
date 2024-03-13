@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body>
+<body onload="onload()">
     <section class="bodyChild">
         <div class="naviBar">
             <div class="naviContainer">
                 <img src="./img/logo-nebeneinander.png" alt="Logo" class="logoNavi">
-                <a href="#" class="links">SHOP</a>
+                <a href="index.html" class="links">HOME</a>
+                <a href="https://www.stylesupplyshop.de/" class="links">SHOP</a>
                 <a href="#" class="links">PREISE</a>
                 <a href="#" class="links">KONTAKT</a>
-                <a href="#" class="links" id="media1000LinkSports">SPORTARTEN</a>
                 <a href="#" class="links" id="media1000LinkTeam">ÜBER UNS</a>
             </div>
             <div class="socialMediaNaviContainer">
@@ -28,6 +28,7 @@
                 <img src="./img/insta-weiß.png" alt="instagram icon" class="socialMediaNavi">
             </div>
         </div>
+
         <div class="eyecatcher">
             <h1 class="h1Eyecatcher">
                 <br> <span id="sport" class="trackingInExpand">DEINE<br>
@@ -38,66 +39,144 @@
         </div>
     </section>
 
+
     <section class="customContainer infobox">
-        <h1 class="flex03 center column">Für jede Sportart die passende Auswahl!<br>
-            WÄHLE DEINE SPORTART:</h1>
-        <h1 class="padding80 center flex03">ODER</h1>
-        <div class="center column flex03">
-            <h1>GEHE DIREKT ZU SCHRITT ZWEI UND NENNE UNS DEINE SPORTART IM KONTAKTFORMULAR</h1>
-            <button class="button-49">SCHRITT 2</button>
-        </div>
+        <h1 class="flex03 center column">FÜR JEDE SPORTART DIE PASSENDE AUSWAHL</h1>
+
     </section>
 
     <section>
+
         <div id="customContainerBackground">
-            <div class="customContainer">
-                <img src="./img/jersey.png" id="jerseyBlanco">
-                <div class="customContent">
-                    <div class="customContentSpan">
-                        <img src="./img/mtb2.png" alt="shirt icon" class="styleShirtIcon">
-                        <span>MTB</span>
+
+            <div class="customContainer column">
+                <div class="center">
+                    <h1 class="styleSteps">#1</h1><div class="seperater"></div><h1 class="styleTitle">SPORTART</h1>
+                </div>
+                <div class="center customContainerBtn">
+                    <div class="customContent">
+                        <div class="customContentSpan">
+                            <button id="btnMtb" class="customContentBtns" onclick="addChosenSport(0)">
+                                <span><img src="./img/mtb2.png" alt="shirt icon" class="styleSportIcon">MTB</span>
+                            </button>
+                        </div>
+                        <div class="customContentSpan">
+                            <button id="btnPaintball" class="customContentBtns" onclick="addChosenSport(1)">
+                                <span><img src="./img/paintball3.png" alt="shirt icon"
+                                        class="styleSportIcon">PAINTBALL</span>
+                            </button>
+                        </div>
+                        <div class="customContentSpan">
+                            <button id="btnESports" class="customContentBtns" onclick="addChosenSport(2)">
+                                <span><img src="./img/controller2.png" alt="shirt icon"
+                                        class="styleSportIcon">E-SPORTS</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="customContentSpan"> <img src="./img/paintball3.png" alt="shirt icon"
-                            class="styleShirtIcon">
-                        <span>PAINTBALL</span>
-                    </div>
-                    <div class="customContentSpan"> <img src="./img/controller2.png" alt="shirt icon"
-                            class="styleShirtIcon">
-                        <span>E-SPORTS</span>
+                    <div class="customContent">
+                        <div class="customContentSpan">
+                            <button id="btnRollerDerby" class="customContentBtns" onclick="addChosenSport(3)">
+                                <span><img src="./img/rollerskates2.png" alt="shirt icon" class="styleSportIcon">ROLLER
+                                    DERBY</span></button>
+                        </div>
+                        <div class="customContentSpan">
+                            <button id="btnBasketball" class="customContentBtns" onclick="addChosenSport(4)">
+                                <span><img src="./img/basketball.png" alt="shirt icon"
+                                        class="styleSportIcon">BASKETBALL</span>
+                            </button>
+                        </div>
+                        <div class="customContentSpan">
+                            <button id="btnFirmenbekleidung" class="customContentBtns" onclick="addChosenSport(5)">
+                                <span><img src="./img/business2.png" alt="shirt icon"
+                                        class="styleSportIcon">FIRMENKLEIDUNG</span></button>
+                        </div>
                     </div>
                 </div>
-                <div class="customContent">
-                    <div class="customContentSpan"> <img src="./img/rollerskates2.png" alt="shirt icon"
-                            class="styleShirtIcon">
-                        <span>ROLLER DERBY</span>
+                <div class="sportNotFoundHeadlineContainer">
+                    <h1>SPORTART NICHT DABEI?</h1>
+                    <div id="inputSportsContainer">
+                        <input type="text" placeholder="Gib sie hier ein!">
                     </div>
-                    <div class="customContentSpan"> <img src="./img/basketball.png" alt="shirt icon"
-                            class="styleShirtIcon">
-                        <span>BASKETBALL</span>
+                    <button class="button-49">SENDEN</button>
+
+                </div>
+                <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" id="slideShowContainer">
+                        <div class="carousel-item active">
+                            <div id="slideShowSport"></div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only" onclick="nextPicture()">Next</span>
+                        </a>
                     </div>
-                    <div class="customContentSpan"> <img src="./img/business2.png" alt="shirt icon"
-                            class="styleShirtIcon">
-                        <span>FIRMENKLEIDUNG</span>
+                </div> -->
+
+            </div>
+
+            <div class="customContainer2 column">
+                <div class="center">
+                    <h1 class="styleSteps" id="2">#2</h1><div class="seperater"></div><h1 class="styleTitle">PRODUKT</h1>
+                </div>
+                <div class="dFlex">
+                    <div class="customContentSpan2">
+                        <button id="btnJerseys" class="jerseyMerchBtns" onclick="addChosenProduct(0)">
+                            <span>JERSEYS</span>
+                            <div><img src="./img/jersey.png" alt="shirt icon" class="styleJersyMerchImg"></div>
+                        </button>
+                    </div>
+                    <div class="customContentSpan2">
+                        <button id="btnMerch" class="jerseyMerchBtns" onclick="addChosenProduct(1)">
+                            <span>MERCH</span>
+                            <div><img src="./img/jersey.png" alt="shirt icon" class="styleJersyMerchImg"></div>
+                        </button>
                     </div>
                 </div>
+
             </div>
-        </div>
-        <div class="customContainer">
-            <div class="customContent2">
-                <h2>WÄHLE EIN DESIGN:</h2><br>
-                <div>LASS DICH IM SHOP INSPIRIEREN</div><br>
-                <button id="shopButton" class="button-49white">Zum Shop</button>
-                <div class="line"></div><br>
-                <div class="styleSpanDesign">KONTAKTIERE UNS MIT DEINER IDEE</div>
-                <button class="button-49white">Kontakt</button>
+            
+            <div class="customContainer2 column">
+                <div class="center">
+                    <h1 class="styleSteps">#3</h1><div class="seperater"></div><h1 class="styleTitle">DESIGN</h1>
+                </div>
+                <div class="dFlex">
+                <div class="customContentSpan2">
+                    <button id="btnJerseys" class="jerseyMerchBtns" onclick="addChosenProduct(0)">
+                        <span>JERSEY</span>
+                        <div><img src="./img/jersey.png" alt="shirt icon" class="styleJersyMerchImg"></div>
+                    </button>
+                </div>
+                <div class="customContentSpan2">
+                    <button id="btnMerch" class="jerseyMerchBtns" onclick="addChosenProduct(1)">
+                        <span>MERCH</span>
+                        <div><img src="./img/jersey.png" alt="shirt icon" class="styleJersyMerchImg"></div>
+                    </button>
+                </div></div>
             </div>
-            <img src="./img/jersey.png" id="jersey">
+
+    </section>
+
+    <section class="customContainer infobox">
+        <div class="column spaceBetween padding24">
+            <h1 class="flex03 center column">RUF EINFACH AN</h1>
+            <img src="./img/phone.svg" alt="phone icon" id="phone">
+            <h1><a href="tel:015257196918" class="flex03 center column">015257196918</a></h1>
         </div>
-        <div class="customContainer">
-            <img src="./img/jersey.png" id="jersey">
-            <div class="customContent"></div>
+        <h1 class="margin80 center flex03">ODER</h1>
+        <div class="center column flex03">
+            <h1>SCHREIB UNS DIREKT ÜBER WHATSAPP</h1>
+            <div><a aria-label="Chat on WhatsApp" href="https://wa.me/004915257196918"><img alt="Chat on WhatsApp"
+                        src="img/WhatsAppButtonWhiteSmall.png" id="whatsApp" />
+                </a></div>
         </div>
     </section>
+
     <section class="contactFormContainerBackground">
         <div class="contactFormContainer">
             <div class="contactForm">
@@ -131,8 +210,21 @@
                 </div>
                 <div class="row">
                     <div class="col">
+                        <input type="text" class="form-control" onchange="sportContactForm()" id="sportContactForm"
+                            placeholder="Schritt 1 übersprungen? Dann gib jetzt hier deine Sportart ein"
+                            aria-label="touchpoint">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
                         <input type="text" class="form-control" id="whereFound"
-                            placeholder="Worüber haben Sie uns gefunden?" aria-label="touchpoint">
+                            placeholder="Worüber hast du uns gefunden?" aria-label="touchpoint">
+                    </div>
+                </div>
+                <div class="column ">
+                    <div id="chosenSport">
+                    </div>
+                    <div id="chosenProduct">
                     </div>
                 </div>
                 <form>
@@ -142,7 +234,6 @@
                             placeholder="Schreib uns eine Nachricht.." rows="3"></textarea>
                     </div>
                 </form>
-
             </div>
 
 

@@ -219,12 +219,13 @@ body {
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
     background-color: black;
+
 }
 
 
 .bodyChild {
     height: 100vh;
-    background-color: black;
+    background-color: #EFF1F2;
     background-image: url(./img/background-woman.jpg);
     background-attachment: fixed;
     background-position: top;
@@ -321,11 +322,36 @@ body {
     background-color: black;
     margin: 0;
     width: 100%;
-    height: 100%;
+    height: 100vw;
 }
 
 
 .customContainer {
+    background-color: black;
+    display: flex;
+    flex: 0.5;
+    padding: 80px;
+    align-items: center;
+    filter: drop-shadow(5px 10px 8px black);
+    margin: 80px;
+    border-radius: 50px;
+}
+
+
+.customContainer2 {
+    background-color: black;
+    display: flex;
+    flex: 0.5;
+    padding: 80px;
+    align-items: center;
+    filter: drop-shadow(5px 10px 8px black);
+    margin: 80px;
+    border-radius: 50px;
+    justify-content: center;
+}
+
+
+.customContainer3 {
     background-color: black;
     display: flex;
     flex: 0.5;
@@ -358,46 +384,40 @@ body {
 }
 
 
-#jerseyBlanco {
+#slideShowContainer {
     height: 400px;
-    flex: 0.5;
     background-color: white;
     filter: drop-shadow(5px 10px 12px);
     border-radius: 50px;
+    width: 80vw;
 }
 
 
-#jerseyBlanco:not(:hover) {
+#slideShowContainer:not(:hover) {
     transition: all 0.5s ease-in-out;
-    transform: scale(1);
-}
-
-
-#jerseyBlanco:hover {
-    transition: all 0.25s ease-in-out;
-    transform: scale(1.15);
-}
-
-
-.styleShirtIcon:hover {
-    animation: flip-vertical-left .4s cubic-bezier(.455, .03, .515, .955) alternate both;
 
 }
 
-.styleShirtIcon:not(:hover) {
-    animation: flip-vertical-left .4s cubic-bezier(.455, .03, .515, .955) alternate-reverse both;
+
+#slideShowContainer:hover {
+    transition: all 0.5s ease-in-out;
+    height: 100vh;
 }
+
+
 
 
 .seperater {
     height: 160px;
+    width: 1px;
     background-color: RGB(112, 156, 162);
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px;
-    filter: drop-shadow(0px -2px 2px white);
+    margin-left: 24px;
+    margin-right: 16px;
 }
 
 
@@ -420,12 +440,86 @@ body {
 
 
 .customContent {
-    height: 520px;
+    height: 100vh;
     width: 100%;
     background-color: black;
     color: RGB(112, 156, 162);
     display: grid;
     align-items: center;
+}
+
+
+.customContentBtns {
+    background-color: RGBA(112, 156, 162, 0.2);
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 80px;
+    margin-bottom: 160px;
+    border: 0;
+}
+
+
+.customContentBtns:not(:hover) {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+
+.customContentBtns:hover {
+    transition: all 0.25s ease-in-out;
+    transform: scale(1.10);
+    background-color: RGB(112, 156, 162);
+}
+
+
+.customContentBtns.hovered {
+    /* Füge hier die Stile für den hervorgehobenen Button hinzu */
+    /* Zum Beispiel: */
+    background-color: RGB(112, 156, 162);
+    /* Hintergrundfarbe ändern */
+    transform: scale(1.10);
+    /* Vergrößere den Button */
+    /* Füge weitere Stile hinzu, die du ändern möchtest */
+}
+
+
+.jerseyMerchBtns {
+    background-color: RGBA(112, 156, 162, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 80px;
+    border: 0;
+}
+
+
+.jerseyMerchBtns:not(:hover) {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+
+.jerseyMerchBtns:hover {
+    transition: all 0.25s ease-in-out;
+    transform: scale(1.10);
+    background-color: RGB(112, 156, 162);
+}
+
+
+.jerseyMerchBtns.hovered {
+    background-color: RGB(112, 156, 162);
+    transform: scale(1.10);
+}
+
+
+.styleJersyMerchImg {
+    width: 75%;
+    border-radius: 20px;
 
 }
 
@@ -434,19 +528,44 @@ body {
     padding: 24px;
 }
 
+
 .customContentSpan {
-    padding-left: 56px;
-    padding-bottom: 16px;
     font-size: 24px;
+    height: 100%;
 }
 
 
 .customContentSpan span {
     color: white;
     padding-left: 48px;
-
 }
 
+
+.customContentSpan2 {
+    font-size: 24px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.customContentSpan2 span {
+    color: white;
+    padding-bottom: 24px;
+    font-size: 40px;
+}
+
+
+.customContentSpan3 {
+    font-size: 24px;
+    height: 100%;
+}
+
+
+.customContentSpan3 span {
+    color: white;
+    padding-left: 48px;
+}
 
 .line {
     width: 80%;
@@ -459,12 +578,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 
 .column {
     flex-direction: column;
+}
+
+.padding24 {
+    padding: 24px;
+}
+
+
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -485,8 +614,8 @@ body {
 }
 
 
-.padding80 {
-    margin: 80;
+.margin80 {
+    margin: 80px;
 }
 
 
@@ -502,9 +631,31 @@ body {
 }
 
 
-.styleShirtIcon {
-    width: 64px;
+.styleSportIcon {
+    width: 104px;
+    padding-right: 40px;
 }
+
+
+#whatsApp {
+    filter: drop-shadow(0px 2px 3px black);
+}
+
+
+#phone {
+    width: 40px;
+    filter: drop-shadow(0px 2px 3px black);
+}
+
+
+/* .styleSportIcon:hover {
+    animation: flip-vertical-left .4s cubic-bezier(.455, .03, .515, .955) alternate both;
+}
+
+
+.styleSportIcon:not(:hover) {
+    animation: flip-vertical-left .4s cubic-bezier(.455, .03, .515, .955) alternate-reverse both;
+} */
 
 
 .styleSpanDesign {
@@ -543,7 +694,7 @@ body {
     line-height: 78px;
     font-size: 20px;
     font-family: 'Bebas Neue', sans-serif;
-    background: linear-gradient(45deg, transparent 5%, black 5%);
+    background: linear-gradient(45deg, transparent 5%, #3b858f 5%);
     border: 0;
     color: white;
     letter-spacing: 3px;
@@ -594,7 +745,7 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, RGB(112, 156, 162) 5%);
-    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    text-shadow: -3px -3px 0px RGB(255, 0, 43), 3px 3px 0px #00E6F6;
     clip-path: var(--slice-0);
 }
 
@@ -679,7 +830,6 @@ body {
 .contactFormContainerBackground {
     background-image: url('./img/post.jpg');
     background-size: cover;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -699,7 +849,6 @@ body {
 
 
 .contactForm {
-    margin: 80px;
     display: flex !important;
     box-shadow: 0 3px 10px black;
     align-items: center !important;
@@ -709,6 +858,7 @@ body {
     color: white;
     width: 80%;
     padding-bottom: 80px;
+    margin: 80px;
 }
 
 
@@ -716,6 +866,17 @@ body {
     padding-top: 24px;
     padding-bottom: 40px;
     filter: drop-shadow(2px 2px 4px black);
+}
+
+
+.form-control {
+    box-sizing: none !important;
+}
+
+*,
+::after,
+::before {
+    box-sizing: content-box;
 }
 
 #postImg {
@@ -784,7 +945,7 @@ body {
 
 
 .infobox h1 {
-    color: black;
+    color: RGB(112, 156, 162);
     font-family: 'Bebas Neue', sans-serif;
     filter: drop-shadow(0px 2px 3px black);
     font-size: 48px;
@@ -792,7 +953,7 @@ body {
 
 
 .infobox {
-    background-color: RGB(112, 156, 162);
+    background-color: black;
     color: black;
     font-family: 'Bebas Neue', sans-serif;
     filter: drop-shadow(0px 6px 5px black);
@@ -805,10 +966,40 @@ body {
 .infobox button {
     margin-right: 40px;
     filter: drop-shadow(0px 6px 5px black);
-
     display: flex;
     justify-content: center;
 }
+
+
+.infobox a {
+    color: white
+}
+
+
+#chosenSport {
+    display: flex;
+}
+
+
+#chosenProduct {
+    display: flex;
+}
+
+
+.chosenSportProductContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+#check-icon {
+    width: 24px;
+}
+
+
+
 
 
 @media (max-width: 1200px) {
@@ -821,6 +1012,9 @@ body {
         height: 16px
     }
 
+    .customContainer {
+        flex-direction: column;
+    }
 
     .customContent {
         display: none;
@@ -839,7 +1033,7 @@ body {
         justify-content: center;
     }
 
-    .styleShirtIcon {
+    .styleSportIcon {
         flex: 1;
     }
 
@@ -856,13 +1050,20 @@ body {
         border-radius: 80px;
     }
 
-    .styleShirtIcon {
+    .styleSportIcon {
         display: none;
     }
 }
 
 
 @media (max-width: 1000px) {
+    .customContainer2 {
+        flex-direction: column;
+    }
+
+    .customContainer3 {
+        flex-direction: column;
+    }
 
     #media1000LinkSports {
         display: none;
@@ -899,4 +1100,113 @@ body {
     .bodyChild {
         background-position: right;
     }
+}
+
+
+.styleSteps {
+    color: RGB(112, 156, 162);
+    align-items: center;
+    font-family: 'Roboto Bold';
+    font-size: 160px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+}
+
+/* Farbe des Scrollbalkenfahrbalkens */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+/* Hervorhebung beim Hovern über den Scrollbalken */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+#inputSportsContainer {
+    width: 50vh;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: white;
+    align-items: center;
+}
+
+
+#inputSportsContainer input {
+    width: 80%;
+    height: 80%;
+    border: none;
+}
+
+
+.sportNotFoundHeadlineContainer {
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    gap: 24px;
+    background-color: RGB(22, 31, 32);
+    margin-bottom: 40px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 20px;
+}
+
+
+#inputSportsContainer input::placeholder {
+    text-align: center;
+}
+
+
+#inputSportsContainer input:focus {
+    outline: none;
+}
+
+
+#btnMtb {
+    border-top-left-radius: 50px;
+}
+
+
+#btnRollerDerby {
+    border-top-right-radius: 50px;
+}
+
+
+.dFlex {
+    display: flex;
+}
+
+
+.marginBottom50 {
+    margin-bottom: 50px;
+}
+
+
+#btnJerseys {
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+
+#btnMerch {
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+
+.styleTitle {
+    color: RGB(112, 156, 162);
+    font-family: 'Bebas Neue', sans-serif;
+    filter: drop-shadow(0px 2px 3px black);
+    font-size: 48px;
 }
